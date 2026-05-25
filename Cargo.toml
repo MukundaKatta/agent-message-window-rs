@@ -1,0 +1,21 @@
+[package]
+name = "agent-message-window"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.74"
+description = "Sliding window of recent LLM conversation turns with paired-protection: never drop a tool_use without its tool_result sibling. Zero deps (serde_json only)."
+authors = ["Mukunda Rao Katta <mukunda.vjcs6@gmail.com>"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/MukundaKatta/agent-message-window-rs"
+homepage = "https://github.com/MukundaKatta/agent-message-window-rs"
+documentation = "https://docs.rs/agent-message-window"
+readme = "README.md"
+keywords = ["llm", "agents", "conversation", "window", "anthropic"]
+categories = ["api-bindings"]
+exclude = [".github/*", "target/*"]
+
+[dependencies]
+serde_json = "1"
+
+[dev-dependencies]
+serde_json = "1"
