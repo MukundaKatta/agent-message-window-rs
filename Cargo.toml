@@ -12,7 +12,7 @@ documentation = "https://docs.rs/agent-message-window"
 readme = "README.md"
 keywords = ["llm", "agents", "conversation", "window", "anthropic"]
 categories = ["api-bindings"]
-exclude = [".github/*", "target/*"]
+exclude = [".github/*", "target/*", "*.log"]
 
 [dependencies]
 serde_json = "1"
