@@ -2,20 +2,12 @@
 name = "agent-message-window"
 version = "0.1.0"
 edition = "2021"
-rust-version = "1.74"
-description = "Sliding window of recent LLM conversation turns with paired-protection: never drop a tool_use without its tool_result sibling. Zero deps (serde_json only)."
-authors = ["Mukunda Rao Katta <mukunda.vjcs6@gmail.com>"]
-license = "MIT OR Apache-2.0"
+description = "Sliding message window with paired tool-call protection for LLM context"
+license = "MIT"
 repository = "https://github.com/MukundaKatta/agent-message-window-rs"
-homepage = "https://github.com/MukundaKatta/agent-message-window-rs"
-documentation = "https://docs.rs/agent-message-window"
-readme = "README.md"
-keywords = ["llm", "agents", "conversation", "window", "anthropic"]
+keywords = ["agent", "llm", "context", "window", "messages"]
 categories = ["api-bindings"]
-exclude = [".github/*", "target/*", "*.log"]
+exclude = ["target/*", ".github/*", "*.log"]
 
 [dependencies]
-serde_json = "1"
-
-[dev-dependencies]
 serde_json = "1"
