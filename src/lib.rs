@@ -240,10 +240,14 @@ mod tests {
         w.push(tool_result_msg("id1"));
         w.push(user("a"));
         w.push(user("b")); // triggers trim: evicts tool_use, co-evicts tool_result
-        // Should end up with just ["a", "b"]
+                           // Should end up with just ["a", "b"]
         let msgs = w.messages();
-        assert!(!msgs.iter().any(|m| tool_use_ids_in_use(m).contains(&"id1".to_string())));
-        assert!(!msgs.iter().any(|m| tool_use_ids_in_result(m).contains(&"id1".to_string())));
+        assert!(!msgs
+            .iter()
+            .any(|m| tool_use_ids_in_use(m).contains(&"id1".to_string())));
+        assert!(!msgs
+            .iter()
+            .any(|m| tool_use_ids_in_result(m).contains(&"id1".to_string())));
     }
 
     #[test]
